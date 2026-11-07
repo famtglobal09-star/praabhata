@@ -30,9 +30,14 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '').strip().lower() in {'1', 'true', 'yes
 
 ALLOWED_HOSTS = [
     host.strip()
-    for host in os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,[::1]').split(',')
+    for host in os.environ.get(
+        'DJANGO_ALLOWED_HOSTS',
+        'prabatha.com,www.prabatha.com,localhost,127.0.0.1,[::1]',
+    ).split(',')
     if host.strip()
 ]
+
+SITE_URL = os.environ.get('SITE_URL', 'https://prabatha.com').rstrip('/')
 
 
 # Application definition

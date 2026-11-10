@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Django runserver",
+			"type": "shell",
+			"command": "C:/Users/dsubb/AppData/Local/Programs/Python/Python313/python.exe",
+			"args": [
+				"prabhata/manage.py",
+				"runserver"
+			],
+			"options": {
+				"env": {
+					"DJANGO_SECRET_KEY": "local-development-only-key",
+					"DJANGO_DEBUG": "true"
+				}
+			},
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
